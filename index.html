@@ -305,6 +305,170 @@ nav ul a:hover { border-bottom-color: var(--hot); }
   color: transparent;
 }
 
+/* ---------- DIRTBAG SECTION ---------- */
+.dirtbag {
+  background: var(--ink);
+  border-bottom: 4px solid var(--acid);
+  padding: 64px 32px;
+}
+.dirtbag__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.dirtbag__head {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.dirtbag__title {
+  font-family: 'Bagel Fat One', cursive;
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 0.9;
+  color: var(--paper);
+}
+.dirtbag__title em {
+  font-style: normal;
+  color: var(--acid);
+}
+.dirtbag__tag {
+  background: var(--hot);
+  color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 2px solid var(--paper);
+  white-space: nowrap;
+  align-self: center;
+}
+.dirtbag__sub {
+  color: rgba(244,241,234,0.55);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+.dirtbag__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+.dirtbag-card {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.dirtbag-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 var(--acid);
+  border-color: var(--acid);
+}
+.dirtbag-card__image {
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  border-bottom: 2px solid #333;
+  transition: border-color 0.2s;
+}
+.dirtbag-card:hover .dirtbag-card__image { border-color: var(--acid); }
+.dirtbag-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.dirtbag-card:hover .dirtbag-card__image img { transform: scale(1.06); }
+.dirtbag-card__sale-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--hot);
+  color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 10px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  z-index: 2;
+}
+.dirtbag-card__body {
+  padding: 18px 18px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.dirtbag-card__name {
+  font-family: 'Bagel Fat One', cursive;
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: 6px;
+  color: var(--paper);
+}
+.dirtbag-card__sku {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(244,241,234,0.4);
+  margin-bottom: 14px;
+}
+.dirtbag-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  gap: 10px;
+}
+.dirtbag-card__prices {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.dirtbag-card__was {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: rgba(244,241,234,0.4);
+  text-decoration: line-through;
+}
+.dirtbag-card__price {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--acid);
+}
+.dirtbag-card__add {
+  background: var(--acid);
+  color: var(--ink);
+  border: 2px solid var(--acid);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 10px 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.dirtbag-card__add:hover { background: var(--hot); color: var(--paper); border-color: var(--hot); }
+.dirtbag-card__add.added { background: var(--mint); border-color: var(--mint); color: var(--ink); }
+
+@media (max-width: 700px) {
+  .dirtbag { padding: 48px 18px; }
+}
+
 /* ---------- CATALOG ---------- */
 .catalog {
   padding: 80px 32px;
@@ -791,6 +955,20 @@ footer {
   </div>
 </div>
 
+<!-- DIRTBAG SECTION -->
+<section class="dirtbag" id="dirtbag">
+  <div class="dirtbag__inner">
+    <div class="dirtbag__head">
+      <div>
+        <h2 class="dirtbag__title">the <em>dirtbag</em>.</h2>
+        <p class="dirtbag__sub">real sacks. real cheap. on sale now.</p>
+      </div>
+      <span class="dirtbag__tag">🔥 limited sale</span>
+    </div>
+    <div class="dirtbag__grid" id="dirtbag-grid"></div>
+  </div>
+</section>
+
 <!-- CATALOG -->
 <section class="catalog" id="shop">
   <div class="section-head">
@@ -861,6 +1039,15 @@ footer {
 
 <script>
 // =====================================================================
+// DIRTBAG PRODUCTS
+// =====================================================================
+const DIRTBAGS = [
+  { id: 'db-01', sku: 'DB-01', name: 'The Blaze',   price: 11.99, was: 19.99, img: 'images/db-orange.jpg' },
+  { id: 'db-02', sku: 'DB-02', name: 'Slime Wave',  price: 12.99, was: 20.99, img: 'images/db-blue.jpg'   },
+  { id: 'db-03', sku: 'DB-03', name: 'Acid Burn',   price: 10.99, was: 17.99, img: 'images/db-green.jpg'  },
+];
+
+// =====================================================================
 // PRODUCT CATALOG
 // =====================================================================
 const PRODUCTS = [
@@ -926,6 +1113,36 @@ function removeFromCart(id) {
 // =====================================================================
 // RENDER: CATALOG
 // =====================================================================
+function renderDirtbag() {
+  const grid = document.getElementById('dirtbag-grid');
+  grid.innerHTML = DIRTBAGS.map(p => `
+    <article class="dirtbag-card" data-id="${p.id}">
+      <div class="dirtbag-card__image">
+        <div class="dirtbag-card__sale-badge">SALE</div>
+        <img src="${p.img}" alt="${p.name} footbag" loading="lazy">
+      </div>
+      <div class="dirtbag-card__body">
+        <h3 class="dirtbag-card__name">${p.name}</h3>
+        <div class="dirtbag-card__sku">${p.sku} · dirtbag series</div>
+        <div class="dirtbag-card__footer">
+          <div class="dirtbag-card__prices">
+            <span class="dirtbag-card__was">$${p.was.toFixed(2)}</span>
+            <span class="dirtbag-card__price">$${p.price.toFixed(2)}</span>
+          </div>
+          <button class="dirtbag-card__add" data-add="${p.id}">+ add</button>
+        </div>
+      </div>
+    </article>
+  `).join('');
+
+  grid.querySelectorAll('[data-add]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      addToCart(btn.dataset.add);
+    });
+  });
+}
+
 function renderCatalog() {
   const grid = document.getElementById('grid');
   grid.innerHTML = PRODUCTS.map(p => {
@@ -958,6 +1175,10 @@ function renderCatalog() {
   });
 }
 
+function findProduct(id) {
+  return PRODUCTS.find(x => x.id === id) || DIRTBAGS.find(x => x.id === id);
+}
+
 function flashAdded(id) {
   const btn = document.querySelector(`[data-add="${id}"]`);
   if (!btn) return;
@@ -979,7 +1200,7 @@ function renderCart() {
     itemsEl.innerHTML = '<div class="cart-empty">your bag is empty<br>go pick a sack ✦</div>';
   } else {
     itemsEl.innerHTML = cart.map(item => {
-      const p = PRODUCTS.find(x => x.id === item.id);
+      const p = findProduct(item.id);
       return `
         <div class="cart-item">
           <div class="cart-item__img"><img src="${p.img}" alt=""></div>
@@ -1009,7 +1230,7 @@ function renderCart() {
 
   // Totals
   const subtotal = cart.reduce((s, i) => {
-    const p = PRODUCTS.find(x => x.id === i.id);
+    const p = findProduct(i.id);
     return s + (p.price * i.qty);
   }, 0);
   const freeShip = subtotal >= SHIPPING_THRESHOLD || subtotal === 0;
@@ -1110,6 +1331,7 @@ document.getElementById('checkoutBtn').addEventListener('click', async () => {
 // =====================================================================
 // INIT
 // =====================================================================
+renderDirtbag();
 renderCatalog();
 renderCart();
 </script>
