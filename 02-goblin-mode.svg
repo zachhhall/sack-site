@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Goblin Mode">
+  <defs>
+    <radialGradient id="shade" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="2.2" numOctaves="2" seed="3"/>
+      <feColorMatrix values="0 0 0 0 0
+                             0 0 0 0 0
+                             0 0 0 0 0
+                             0 0 0 0.22 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <clipPath id="ball"><circle cx="200" cy="200" r="170"/></clipPath>
+    
+  </defs>
+  <g clip-path="url(#ball)">
+    
+    <rect x="0" y="0" width="400" height="80" fill="#3FA86A"/>
+    <rect x="0" y="80" width="400" height="320" fill="#E8651C"/>
+    <!-- triangle eyes -->
+    <polygon points="120,170 170,170 145,215" fill="#0d0d0d"/>
+    <polygon points="230,170 280,170 255,215" fill="#0d0d0d"/>
+    <!-- jagged mouth -->
+    <polygon points="100,250 145,250 160,275 180,250 220,250 240,275 255,250 300,250 300,295 100,295" fill="#0d0d0d"/>
+
+    <circle cx="200" cy="200" r="170" fill="url(#shade)"/>
+    <circle cx="200" cy="200" r="170" filter="url(#grain)" opacity="0.55"/>
+  </g>
+  <circle cx="200" cy="200" r="170" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="2"/>
+</svg>
