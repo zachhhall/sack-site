@@ -26,8 +26,8 @@ const PRODUCTS = {
   'sack-11': { name: 'Reggae Riot',      price: 1799, priceId: 'price_REPLACE_ME' },
   'sack-12': { name: 'Grape Soda',       price: 1399, priceId: 'price_REPLACE_ME' },
   'db-01': { name: 'The Blaze', price: 1199, priceId: 'price_1TW3YKQngPa8tz1GkO0HEezP' },
-  'db-02': { name: 'Slime Wave', price: 1299, priceId: 'price_1TW3b1QngPa8tz1Gf5P5wbUV' },
-  'db-03': { name: 'Acid Burn', price: 1099, priceId: 'price_REPLACE_ME' },
+  'db-02': { name: 'Slime Wave', price: 1299, priceId: 'price_1TW3xUQngPa8tz1GAJrlj9xN' },
+  'db-03': { name: 'Acid Burn', price: 1099, priceId: 'price_1TW3b1QngPa8tz1Gf5P5wbUV' },
 };
 
 // Shipping config — match what's set in your Stripe Dashboard if you want
