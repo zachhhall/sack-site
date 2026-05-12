@@ -13,11 +13,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // Server-side source of truth for product info. The client only sends
 // product IDs + quantities — never prices — to prevent price tampering.
 const PRODUCTS = {
-  'sack-01': { name: 'Solar Flare',      price: 1399, priceId: 'price_REPLACE_ME' },
-  'sack-02': { name: 'Goblin Mode',      price: 2299, priceId: 'price_REPLACE_ME' },
-  'sack-03': { name: 'Hot Honey',        price: 1499, priceId: 'price_REPLACE_ME' },
-  'sack-04': { name: 'Crayon Box',       price: 1599, priceId: 'price_REPLACE_ME' },
-  'sack-05': { name: 'Cuban Linx',       price: 1999, priceId: 'price_REPLACE_ME' },
+  'sack-01': { name: 'Solar Flare',      price: 1399, priceId: 'price_1TVjFNQngPa8tz1GvQAopk8I' },
+  'sack-02': { name: 'Goblin Mode',      price: 2299, priceId: 'price_1TVjFmQngPa8tz1Gq7TaeQm5' },
+  'sack-03': { name: 'Hot Honey',        price: 1499, priceId: 'price_1TVjG7QngPa8tz1G0ffRyK7t' },
+  'sack-04': { name: 'Crayon Box',       price: 1599, priceId: 'price_1TVjGUQngPa8tz1GPHLHb2W7' },
+  'sack-05': { name: 'Cuban Linx',       price: 1999, priceId: 'price_1TVjGtQngPa8tz1GBTIb5aMQ' },
   'sack-06': { name: 'Sunset Crash',     price: 1699, priceId: 'price_1TVjHBQngPa8tz1GvQ2VBDIy' },
   'sack-07': { name: 'Pride Classic',    price: 1499, priceId: 'price_1TVjHeQngPa8tz1GtEsuP7mD' },
   'sack-08': { name: 'Tile Glitch',      price: 1899, priceId: 'price_1TVjI5QngPa8tz1GGRpC2dk4' },
