@@ -124,6 +124,7 @@ export default async function handler(req, res) {
       line_items: lineItems,
       success_url: `${origin}/success.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/`,
+      allow_promotion_codes: true,
       shipping_address_collection: {
         allowed_countries: ['US', 'CA', 'GB', 'AU'],
       },
