@@ -28,6 +28,7 @@ const PRODUCTS = {
   'db-01': { name: 'The Blaze', price: 1199, priceId: 'price_1TW3YKQngPa8tz1GkO0HEezP' },
   'db-02': { name: 'Slime Wave', price: 1299, priceId: 'price_1TW3xUQngPa8tz1GAJrlj9xN' },
   'db-03': { name: 'Acid Burn', price: 1099, priceId: 'price_1TW3b1QngPa8tz1Gf5P5wbUV' },
+  'db-04': { name: 'Duo Bundle', price: 1999, priceId: 'price_1U0sPpQngPa8tz1GQpzZPa0l' },
 };
 
 // Shipping config — match what's set in your Stripe Dashboard if you want
